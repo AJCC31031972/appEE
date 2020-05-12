@@ -1,0 +1,67 @@
+<div class="container" style="padding-top: 10px;">
+    <form class="container">
+        <h3>Datos de la Empresa / unidades de negocio</h3><br>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="codrucemp">RUC*</label>
+                    <input type="text" class="form-control" id="codrucemp" placeholder="Ingrese RUC de la empresa">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="desrazons">Razón social</label>
+                    <input type="text" class="form-control" id="desrazons" placeholder="Ingrese la Razón Social de la empresa">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="codacteco">Actividad Económica</label>
+                    <select id="codacteco" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+                </div>
+                <div class="form-group col-md-8">
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                </div>
+                <div class="form-group col-md-1.5">
+                    <button type="buttonBE" class="btn" style="background-color: brown; color: white;">Buscar Empresa</button>
+                </div>
+                <div class="my-2 text-left">
+                    <button type="buttonRE" class="btn" style="background-color: brown; color: white;" [routerLink]="['/empresas/form']">Registrar Empresa</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-sm">
+        <thead style="background-color:brown; color: white;">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">RUC</th>
+                <th scope="col">Razón Social</th>
+                <th scope="col">Actividad Económica</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empresa of empresas">
+                <th scope="row">{{ empresa.id }}</th>
+                <td>{{ empresa.codRucEmp}}</td>
+                <td>{{ empresa.desRazonS }}</td>
+                <td>{{ empresa.codActEco }}</td>
+                <td class="smallText" style="white-space:nowrap;">
+                    <a class="btn btn-danger" href="#"><i class="fa fa-edit" style='color:white'></i></a></td>
+                <td class="smallText" style="white-space:nowrap;">
+                    <a class="btn btn-danger" href="#"><i class="fa fa-trash-alt" style='color:white'></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

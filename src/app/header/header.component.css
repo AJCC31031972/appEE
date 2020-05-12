@@ -1,0 +1,50 @@
+.navbar {
+    min-height: 80px;
+    overflow: hidden;
+    background-color: brown;
+}
+
+.navbar-toggler {
+    width: 47px;
+    height: 34px;
+    background-color: #fff;
+    border: none;
+}
+
+.navbar-toggler .line {
+    width: 100%;
+    float: left;
+    height: 2px;
+    background-color: brown;
+    margin-bottom: 5px;
+}
+
+.container .foto {
+    width: 84px;
+    height: 84px;
+    overflow: hidden1;
+    margin-right: 10px;
+}
+
+.container .foto a {
+    display: inline-block;
+}
+
+.container .foto img {
+    width: 100%;
+}
+
+.container .texto {
+    flex: 1%;
+    color: #dfdfdf;
+}
+
+.container .texto a {
+    flex: 1%;
+    color: #dfdfdf;
+    font-size: 17px;
+}
+
+.container .collapse .navbar-nav .nav-item .nav-link a {
+    font-size: 47px;
+}
